@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#21272a" />
+  <title>Login - Keke Dú Corte</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Css/Geral.css" />
+  <style>
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      max-width: 350px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .input-group {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #21272a;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background: #444;
+    }
+
+    #erro-login { color: red; margin-top: 10px; display: none; }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="login-box">
+      <h2>Bem-vindo</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="usuario"><i class="fas fa-user"></i> Usuário</label>
+          <input type="text" id="usuario" placeholder="Digite seu usuário" required>
+        </div>
+        <div class="input-group">
+          <label for="senha"><i class="fas fa-lock"></i> Senha</label>
+          <input type="password" id="senha" placeholder="Digite sua senha" required>
+        </div>
+        <button type="submit" class="login-btn">Entrar</button>
+        <p class="cadastro-link">Não tem conta? <a href="Cadastro.html">Cadastre-se</a></p>
+      </form>
+      <p id="erro-login">Usuário ou senha inválidos</p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const user = document.getElementById("usuario").value;
+      const pass = document.getElementById("senha").value;
+
+      if(user === "admin" && pass === "1234"){
+        window.location.href = "index.html"; // vai para a página principal
+      } else {
+        document.getElementById("erro-login").style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keke - Agendamento</title>
+  <link rel="stylesheet" href="Css/Geral.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="cabecalho">
+      <h1 id="Keke">KEKE DÚ CORTE</h1>
+      <nav>
+        <ul>
+          <li><a href="Index.html" class="cta-button">Voltar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section id="agendamento">
+      <h1>Agendamento Online</h1>
+      <p>Horário de funcionamento: <strong>08:00 às 18:00</strong> <br> Não atendemos aos domingos.</p>
+
+      <form action="obrigado2.html" method="POST">
+        
+        <!-- Escolha de dias da semana -->
+        <div class="form-group">
+          <h2>Dias da semana disponíveis</h2>
+          <label><input type="checkbox" name="dia_semana" value="terca"> Terça</label>
+          <label><input type="checkbox" name="dia_semana" value="quarta"> Quarta</label>
+          <label><input type="checkbox" name="dia_semana" value="quinta"> Quinta</label>
+          <label><input type="checkbox" name="dia_semana" value="sexta"> Sexta</label>
+          <label><input type="checkbox" name="dia_semana" value="sabado"> Sábado</label>
+        </div>
+
+        <!-- Primeira opção de data -->
+        <div class="form-group">
+          <h3>Primeira opção de data</h3>
+          <input type="date" name="Pdata" required>
+        </div>
+
+        <!-- Segunda opção de data -->
+        <div class="form-group">
+          <h3>Segunda opção de data</h3>
+          <input type="date" name="Sdata">
+        </div>
+
+        <!-- Botão de envio -->
+        <div class="form-group" style="margin-top:20px;">
+          <button type="submit" class="cta-button">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; Barbearia do Keke. Melhor de Cariacica.</p>
+  </footer>
+</body>
+</html>

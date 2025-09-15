@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#21272a" />
+  <title>Keke Dú Corte</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Css/Geral.css" />
+  <style>
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 70vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    footer {
+      background: #21272a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="cabecalho"> 
+      <h1 id="Keke">KEKE DÚ CORTE</h1>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="menu-desktop">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="Serviços.html"><i class="fas fa-cogs"></i> Serviços</a></li>
+          <li><a href="Faq.html"><i class="fas fa-question-circle"></i> Perguntas</a></li>
+          <li><a href="Sobre.html"><i class="fas fa-users"></i> Sobre Nós</a></li>
+          <li><a href="Contatos.html"><i class="fas fa-phone-alt"></i> Contato</a></li>
+          <li><a href="Galeria2.html"><i class="fas fa-images"></i> Galeria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu lateral (mobile) -->
+  <nav class="menu-mobile" id="menu-mobile">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="Serviços.html"><i class="fas fa-cogs"></i> Serviços</a></li>
+      <li><a href="Faq.html"><i class="fas fa-question-circle"></i> Perguntas</a></li>
+      <li><a href="Sobre.html"><i class="fas fa-users"></i> Sobre Nós</a></li>
+      <li><a href="Contatos.html"><i class="fas fa-phone-alt"></i> Contato</a></li>
+      <li><a href="Galeria2.html"><i class="fas fa-images"></i> Galeria</a></li>
+      <li><a href="Agendamento.html"><i class="fas fa-clock"></i> Agendamento</a></li>
+
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Conteúdo principal -->
+  <section class="hero">
+    <div>
+      <h1>Bem-vindo à Barbearia do Keke!</h1>
+      <p>Transformando cortes em experiências únicas.</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <br><br><br>
+  <footer>
+    <p>&copy; Barbearia do Keke. Melhor de Cariacica.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuMobile = document.getElementById("menu-mobile");
+    const overlay = document.getElementById("overlay");
+
+    menuToggle.addEventListener("click", () => {
+      menuMobile.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      menuMobile.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  </script>
+</body>
+</html>
